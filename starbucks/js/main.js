@@ -97,11 +97,11 @@ coffeeObjHeadline.textContent = coffee.name;
 
 //console.log(coffees[0]);
 
-function  buildTextElement(element, className, content){
+function buildTextElement(element, className, content){
    const newElement = document.createElement(element);
    newElement.classList.add(className);
    newElement.textContent = content;
-
+   return newElement;
 }
 
 
