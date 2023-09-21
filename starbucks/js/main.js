@@ -20,7 +20,33 @@ const introduction = `Hi, my name is ${myName}, I am ${myAge} years old and I li
 const menuBtn = document.getElementById("menuBtn");
 const overlay = document.getElementById("overlay");
 const closeBtn = document.getElementById("closeBtn");
+const coffeeList = document.getElementById("coffeeList");
+const ascendingBtn = document.getElementById("ascendingBtn")
+const descendingBtn = document.getElementById("descendingBtn")
+
 //console.log(menuBtn);
+
+function purgeList(){
+   coffeeList.innerHTML = "";
+
+}
+
+function sortList(sortDirection) {
+   console.log({sortDirection});
+}
+
+ascendingBtn.addEventListener("click", function(){
+   console.log("ascending button has been clicked");
+   purgeList();
+   sortList ("ascending");
+
+})
+
+descendingBtn.addEventListener("click", function(){
+   console.log("descending button has been clicked");
+   purgeList ();
+   sortList ("descending");
+})
 
 
 // "event name", callback function
@@ -104,6 +130,22 @@ function buildTextElement(element, className, content){
    return newElement;
 }
 
+const sortedCoffees = [...coffees].sort(function(a,b) {
+
+if (a.title < b.title) {
+   return -1;
+}
+if (a.title > b.title) {
+   return 1;
+}
+if (a.title === b.title) {
+   return 0;
+}
+
+})
+
+
+
 
 coffees.forEach(function(coffee) {
    
@@ -153,8 +195,7 @@ coffeeArticle.appendChild(coffeeTitle);
 coffeeArticle.appendChild(coffeePrice);
 coffeeArticle.appendChild(coffeeDescription);
 
-
-document.body.appendChild(coffeeArticle);
+coffeeList.appendChild(coffeeArticle);
 
 
 });
