@@ -147,55 +147,55 @@ if (a.title === b.title) {
 
 
 
-coffees.forEach(function(coffee) {
+sortedCoffees.forEach(function(coffee) {
    
    //const coffeeTitle = coffee;
    //const coffeeSecondaryHeadline = document.createElement("h2");
-  // coffeeSecondaryHeadline.textContent = coffeeTitle;
-//document.body.appendChild(coffeeSecondaryHeadline);
+   // coffeeSecondaryHeadline.textContent = coffeeTitle;
+   //document.body.appendChild(coffeeSecondaryHeadline);
 
 
-//1. deconstruct the coffee object
-const {title, price, description, image} = coffee;
+   //1. deconstruct the coffee object
+   const {title, price, description, image} = coffee;
 
 
-//2.create the html elements
-const coffeeArticle = document.createElement("article")
-coffeeArticle.classList.add("coffee-item");
+   //2.create the html elements
+   const coffeeArticle = document.createElement("article")
+   coffeeArticle.classList.add("coffee-item");
 
-const coffeeImage = document.createElement("img")
-coffeeImage.src = `images/${image.fileName}`;
-coffeeImage.textContent = title;
-coffeeImage.width = image.width;
-coffeeImage.height = image.height;
-coffeeImage.alt = image.altText;
+   const coffeeImage = document.createElement("img")
+   coffeeImage.src = `images/${image.fileName}`;
+   coffeeImage.textContent = title;
+   coffeeImage.width = image.width;
+   coffeeImage.height = image.height;
+   coffeeImage.alt = image.altText;
 
-// const coffeeTitle = document.createElement("h2");
-// coffeeTitle.classList.add("coffee-title");
-// coffeeTitle.textContent = title;
-
-
-// const coffeePrice = document.createElement("h3");
-// coffeePrice.classList.add("coffee-price")
-// coffeePrice.textContent = `$${price}`;
-
-const coffeeDescription = document.createElement("p");
-coffeeDescription.classList.add("coffee-description")
-coffeeDescription.textContent = description;
+   // const coffeeTitle = document.createElement("h2");
+   // coffeeTitle.classList.add("coffee-title");
+   // coffeeTitle.textContent = title;
 
 
-const coffeeTitle = buildTextElement("h2", "coffeeTitle", title);
+   // const coffeePrice = document.createElement("h3");
+   // coffeePrice.classList.add("coffee-price")
+   // coffeePrice.textContent = `$${price}`;
+
+   const coffeeDescription = document.createElement("p");
+   coffeeDescription.classList.add("coffee-description")
+   coffeeDescription.textContent = description;
 
 
-const coffeePrice = buildTextElement("h3", "coffee-price", `$${price}`);
+   const coffeeTitle = buildTextElement("h2", "coffeeTitle", title);
 
 
-coffeeArticle.appendChild(coffeeImage);
-coffeeArticle.appendChild(coffeeTitle);
-coffeeArticle.appendChild(coffeePrice);
-coffeeArticle.appendChild(coffeeDescription);
+   const coffeePrice = buildTextElement("h3", "coffee-price", `$${price}`);
 
-coffeeList.appendChild(coffeeArticle);
+
+   coffeeArticle.appendChild(coffeeImage);
+   coffeeArticle.appendChild(coffeeTitle);
+   coffeeArticle.appendChild(coffeePrice);
+   coffeeArticle.appendChild(coffeeDescription);
+
+   coffeeList.appendChild(coffeeArticle);
 
 
 });
