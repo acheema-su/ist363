@@ -430,29 +430,6 @@ body {
   left: 0;
 }
 
-.mobile-nav {
-  /*background-color: yellow;*/
-  /*padding: 1rem;*/
-}
-
-.mobile-nav a {
-  font-family: Arial;
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  display: block;
-  padding: 1rem 0;
-  text-decoration: none;
-}
-
-.mobile-nav ul li {
-  position: relative;
-  left: -1rem;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 0.5s;
-}
-
 .overlay.active ul li {
   opacity: 1;
   left: 0;
@@ -486,10 +463,9 @@ body {
   align-items: center;
   gap: 1rem;
 }
-.nav__link a {
+.nav__link {
   font-family: Arial;
   font-weight: bold;
-  color: black;
   text-decoration: none;
 }
 .nav.nav--desktop {
