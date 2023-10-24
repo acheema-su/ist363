@@ -1,4 +1,4 @@
-@mixin buildFontProperties($size, $color, $font:"Georgia"){
+@mixin buildFontProperties($size, $color, $font:"Georgia") {
     color: $color;
     font-family: $font;
     font-size: $size;
