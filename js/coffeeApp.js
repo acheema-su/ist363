@@ -155,7 +155,7 @@
 //  displayList(coffees);
 
 
--------
+// ------- NEW
 //console.log("coffeeApp!");
 
 // 1. Create variables for the buttons
